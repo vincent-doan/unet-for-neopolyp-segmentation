@@ -35,5 +35,5 @@ gdown.download(url, output, quiet=False)
 
 **3. Run inference**
 ```
-!python /kaggle/working/unet-for-neopolyp-segmentation/infer.py --checkpoint '/kaggle/working/checkpoint/model_checkpoint.pth' --test_dir '/kaggle/input/bkai-igh-neopolyp/test/test' --mask_dir '/kaggle/working/predicted_mask'
+!python /kaggle/working/unet-for-neopolyp-segmentation/infer.py --checkpoint '/kaggle/working/checkpoint/model_checkpoint.pth' --test_dir '/kaggle/input/bkai-igh-neopolyp/test/test/' --mask_dir '/kaggle/working/predicted_mask/'
 ```
