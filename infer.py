@@ -29,7 +29,7 @@ neopolyp_test_dataset = NeopolypTestDataset(images_path=TEST_PATH)
 test_dataloader = DataLoader(neopolyp_test_dataset, batch_size=TEST_BATCH_SIZE, shuffle=True)
 
 # ----------------------CHECKPOINT----------------------
-CHECKPOINT_PATH = torch.load(args.checkpoint)
+CHECKPOINT_PATH = args.checkpoint
 checkpoint = torch.load(CHECKPOINT_PATH)
 model_state_dict = checkpoint['model_state_dict']
 model = PretrainedUNet(for_inference=True)
