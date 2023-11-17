@@ -7,17 +7,20 @@ Score = 0.71927
 
 **0. Access and obtain the checkpoint**
 ```
-import requests
+!pip -q install gdown
+```
+
+```
+import gdown
 import os
 
-drive_url = 'https://drive.google.com/file/d/1sX0ZSTyMOAR1lz8eddapJhn5jNrAUXAt/view?usp=sharing'
+url = 'https://drive.google.com/uc?id=1sX0ZSTyMOAR1lz8eddapJhn5jNrAUXAt'
+
 save_dir = '/kaggle/working/checkpoint/'
 os.mkdir(save_dir)
 
-response = requests.get(drive_url)
-
-with open(os.path.join(save_dir, 'model_checkpoint.pth'), 'wb') as f:
-    f.write(response.content)
+output = os.path.join(save_dir, 'model_checkpoint.pth')
+gdown.download(url, output, quiet=False)
 ```
 
 **1. Clone the repository**
