@@ -1,7 +1,7 @@
 # unet-for-neopolyp-segmentation
 
 ## Work by: Doan The Vinh - 20210940
-Score = 0.71927
+Score = 0.7191
 
 ## Instruction
 
