@@ -12,6 +12,7 @@ import os
 
 drive_url = 'https://drive.google.com/file/d/1sX0ZSTyMOAR1lz8eddapJhn5jNrAUXAt/view?usp=sharing'
 save_dir = '/kaggle/working/checkpoint/'
+os.mkdir(save_dir)
 
 response = requests.get(drive_url)
 
@@ -26,10 +27,10 @@ with open(os.path.join(save_dir, 'model_checkpoint.pth'), 'wb') as f:
 
 **2. Install the necessary packages**
 ```
-!pip install -r requirements.txt
+!pip install -q -r unet-for-neopolyp-segmentation/requirements.txt
 ```
 
 **3. Run inference**
 ```
-!python /kaggle/working/BKAI_Polyp/infer.py --checkpoint '/kaggle/working/checkpoint/model_checkpoint.pth' --test_dir '/kaggle/input/bkai-igh-neopolyp/test/test' --mask_dir '/kaggle/working/predicted_mask'
+!python /kaggle/working/unet-for-neopolyp-segmentation/infer.py --checkpoint '/kaggle/working/checkpoint/model_checkpoint.pth' --test_dir '/kaggle/input/bkai-igh-neopolyp/test/test' --mask_dir '/kaggle/working/predicted_mask'
 ```
