@@ -10,8 +10,8 @@ Score = 0.71927
 import requests
 import os
 
-drive_url = 'https://drive.google.com/file/d/13bUu1Nwes9xUXcUTlZFtOpFY1pt3hXK1/view?usp=sharing'
-save_dir = '/kaggle/working/'
+drive_url = 'https://drive.google.com/file/d/1sX0ZSTyMOAR1lz8eddapJhn5jNrAUXAt/view?usp=sharing'
+save_dir = '/kaggle/working/checkpoint/'
 
 response = requests.get(drive_url)
 
@@ -31,5 +31,5 @@ with open(os.path.join(save_dir, 'model_checkpoint.pth'), 'wb') as f:
 
 **3. Run inference**
 ```
-!python /kaggle/working/BKAI_Polyp/infer.py --checkpoint '/kaggle/working/model_checkpoint.pth' --test_dir '/kaggle/input/bkai-igh-neopolyp/test/test' --mask_dir '/kaggle/working/predicted_mask'
+!python /kaggle/working/BKAI_Polyp/infer.py --checkpoint '/kaggle/working/checkpoint/model_checkpoint.pth' --test_dir '/kaggle/input/bkai-igh-neopolyp/test/test' --mask_dir '/kaggle/working/predicted_mask'
 ```
